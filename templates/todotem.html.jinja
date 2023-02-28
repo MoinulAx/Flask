@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        body {
+        background-color: rgb(40, 154, 193);
+        font-family:'Courier New'
+        }
+
+        h1,h2,h3 {
+        color: whitesmoke;
+        margin-left: 20px;
+        text-align: center;text-decoration-line: underline;
+        text-decoration-color: red;
+        }
+       
+        div {
+        border: 5px solid rgb(86, 127, 223);
+        border-radius: 5px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        margin-right: 100px;
+        margin-left: 80px;
+        background-color: lightblue;
+        }
+
+        </style>
+        <title>Todo</title>
+
+    </head>
+
+    <body>
+    
+    <h1>My goals </h1>
+    <h2>New Year, New Me!</h2>
+    <h3>The Goals that I have for this year are </h3>
+    
+    
+    <div>
+        <ul>
+            {% for todos in a%}
+                <li>{{todos}}</li>
+            {% endfor %}
+        </ul>
+    
+
+    <form
+    action="/add"
+    method="post"
+    
+    >
+        
+        <textarea name="new_todo">
+        </textarea>
+   
+        <input type="Submit">
+    </form>
+   
+   </div>
+    
+    </body>
+
+
+
+
+
+
+</html>

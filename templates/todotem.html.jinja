@@ -24,7 +24,20 @@
         margin-left: 80px;
         background-color: lightblue;
         }
-
+        
+        .button1{
+        transition-duration: 0.4s;
+        background-color: rgb(17, 108, 226);
+        color: black;
+        border: 2px solid #0e54bd; /
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+        
+        .button1:hover {
+        background-color: #195ecd; /* Green */
+        color: white;
+        }
+        
         </style>
         <title>Todo</title>
 
@@ -47,14 +60,12 @@
 
     <form
     action="/add"
-    method="post"
-    
-    >
+    method="post">
         
         <textarea name="new_todo">
         </textarea>
    
-        <input type="Submit">
+        <button class="button1" type="submit">Submit</button>
     </form>
    
    </div>

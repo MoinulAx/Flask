@@ -28,7 +28,7 @@
         .button1{
         transition-duration: 0.4s;
         background-color: rgb(17, 108, 226);
-        color: black;
+        color: rgb(203, 34, 34);
         border: 2px solid #0e54bd; /
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
         }
@@ -52,7 +52,7 @@
     
     <div>
         <ul>
-            {% for todos in a%}
+            {% for todos in result%}
                 <li>{{todos}}</li>
             {% endfor %}
         </ul>

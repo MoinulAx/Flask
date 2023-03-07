@@ -18,12 +18,14 @@ connection= pymysql.connect(
 
 
 a=["I want to have been able to get an work experience that can aquire me some financial gain", "Get my drivers license"]
-
+cursor= connection.cursor()
+ 
 @app.route("/")
 def index(): 
-    cursor= connection.cursor()
     cursor.execute("SELECT * FROM `Todo`")
+
     result= cursor.fetchall()
+    
     print(result[0]['Description'])
 
     print(type(result))
@@ -38,6 +40,8 @@ def index():
 def add():
     new_todo= request.form['new_todo']
     a.append(new_todo)        
+    cursor.execute(f"INSERT INTO `Todo`(`Description`) VALUES ('{new_todo}') ")
+
     return redirect(('/'))
 
 
